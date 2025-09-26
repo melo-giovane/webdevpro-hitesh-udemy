@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "node index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "udemy",
+    "course",
+    "backend"
+  ],
   "author": "Giovane Melo",
   "license": "ISC",
   "description": "",
