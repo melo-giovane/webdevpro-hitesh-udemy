@@ -1,0 +1,16 @@
+{
+  "name": "project-camp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "Giovane Melo",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "prettier": "3.6.2"
+  }
+}
