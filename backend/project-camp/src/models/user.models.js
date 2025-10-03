@@ -55,8 +55,11 @@ const userSchema = new Schema(
     emailVerificationExpiry: {
       type: Date
     }
+  },
+  {
+    timestamps: true,
   }
-)
+);
 
 
 export const User = mongoose.model("User", userSchema)
