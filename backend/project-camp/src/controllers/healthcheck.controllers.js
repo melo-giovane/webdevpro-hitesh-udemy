@@ -18,4 +18,4 @@ const healthcheck = asyncHandler(async (req, res) => {
   .json(new ApiResponse(200, { message: "Server is running"}))
 })
 
-export {healthcheck}
+export {healthcheck};
