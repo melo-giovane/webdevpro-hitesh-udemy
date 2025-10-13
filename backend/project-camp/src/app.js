@@ -10,10 +10,6 @@ const app = express();
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
-app.use((req, res, next) => {
-  console.log(`[${req.method}] ${req.url}`, req.body);
-  next();
-});
 app.use(cookieParser())
 
 
