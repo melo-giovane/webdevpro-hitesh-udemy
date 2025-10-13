@@ -24,7 +24,7 @@ const userSchema = new Schema(
         },
         email: {
             type: String,
-            require: true,
+            required: true,
             unique: true,
             lowercase: true,
             trim: true,
@@ -47,7 +47,7 @@ const userSchema = new Schema(
         forgotPasswordToken: {
             type: String,
         },
-        forgotPassowrdExpiry: {
+        forgotPasswordExpiry: {
             type: Date,
         },
         emailVerificationToken: {
@@ -85,7 +85,7 @@ userSchema.methods.generateAccessToken = function () {
     );
 };
 
-userSchema.geneateRefreshToken = function () {
+userSchema.methods.generateRefreshToken = function () {
     return jwt.sign(
         {
             _id: this._id,

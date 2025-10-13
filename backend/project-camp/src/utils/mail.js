@@ -34,7 +34,8 @@ const sendEmail = async (options) => {
     };
 
     try {
-        await transporter.sendEmail(mail);
+        await transporter.sendMail(mail);
+        console.log("📨 Email enviado com sucesso para:", options.email);
     } catch (error) {
         console.error(
             "Email service failed silently. Make sure that you have provided your mailtrap credentials in the .env file",
