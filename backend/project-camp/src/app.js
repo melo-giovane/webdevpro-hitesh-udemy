@@ -1,8 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-
-
+import { verifyJWT } from "./middlewares/auth.middlewares.js";
 
 const app = express();
 
@@ -10,8 +9,10 @@ const app = express();
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
-app.use(cookieParser())
+app.use(cookieParser());
 
+//middlewares
+app.use(verifyJWT);
 
 //cors configs
 app.use(
@@ -27,6 +28,7 @@ app.use(
 
 import healthcheckRouter from "./routes/healthcheck.routes.js";
 import authRouter from "./routes/auth.routes.js";
+import { verifyJWT } from "./middlewares/auth.middlewares.js";
 
 app.use("/api/v1/healthcheck", healthcheckRouter);
 app.use("/api/v1/auth", authRouter);
