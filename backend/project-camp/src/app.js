@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import { verifyJWT } from "./middlewares/auth.middlewares.js";
 
 const app = express();
 
