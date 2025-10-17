@@ -206,4 +206,4 @@ const verifyEmail = asyncHandler(async (req, res) => {
 
 // const getCurrentUser = asyncHandler(async (req, res) => {})
 
-export { registerUser, login, logoutUser, getCurrentUser };
+export { registerUser, login, logoutUser, getCurrentUser, verifyEmail };
